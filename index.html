@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 10px;
+      }
+      form {
+        background-color: #f9f7f7;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 200px rgb(8, 8, 133);
+        margin-bottom: 20px;
+        width: 300px;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+      }
+      button {
+        background-color: chartreuse;
+        color: rgb(13, 1, 1);
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      table {
+        margin-top: 20%;
+        border-collapse: collapse;
+        width: 5%;
+      }
+      table,
+      th,
+      td {
+        border: 40px solid rgb(11, 134, 145);
+        text-align: left;
+        padding: 8px;
+      }
+      th {
+        background-color: aqua;
+      }
+      #error-message {
+        color: red;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="registrationForm" onsubmit="submitForm(event)">
+      <label for="name">Name </label>
+      <input type="text" id="name" placeholder="Enter a name :" name="name" />
+      <label for="email">Email </label>
+      <input
+        type="email"
+        id="email"
+        placeholder="Enter a email of person :"
+        name="email"
+      />
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        placeholder="Enter a strong password :"
+        name="password"
+      />
+      <label for="dob">DOB</label>
+      <input type="date" id="dob" placeholder="Enter DOB :  " name="dob" />
+      <input type="checkbox" id="terms" name="terms" required="" />
+      <label for="terms">Accept Terms &amp; Conditions</label>
+
+      <button type="submit">Submit</button>
+    </form>
+    <h2>Registration Data</h2>
+    <div id="error-message"></div>
+    <table id="userTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Password</th>
+          <th>Dob</th>
+          <th>Accepted terms</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script src="index.js"></script>
+  </body>
+</html>
