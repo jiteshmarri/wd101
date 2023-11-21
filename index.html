@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,7 +8,7 @@
     <title>Registration Form</title>
     <style>
       body {
-        font-family: Arial, sans-serif;
+        font-family: Arial;
         margin: 0;
         padding: 0;
         display: flex;
@@ -35,6 +37,7 @@
       }
       button {
         background-color: chartreuse;
+        text-shadow: #f9f7f7;
         color: rgb(13, 1, 1);
         padding: 12px;
         border: none;
@@ -65,19 +68,26 @@
   <body>
     <form id="registrationForm" onsubmit="submitForm(event)">
       <label for="name">Name </label>
-      <input type="text" id="name" placeholder="Enter a name :" name="name" />
+      <input
+        type="text"
+        id="name"
+        placeholder="Enter name :"
+        name="name"
+        required
+      />
       <label for="email">Email </label>
       <input
         type="email"
         id="email"
-        placeholder="Enter a email of person :"
+        placeholder="Enter email :"
         name="email"
+        required
       />
       <label for="password">Password</label>
       <input
         type="password"
         id="password"
-        placeholder="Enter a strong password :"
+        placeholder="Enter password :"
         name="password"
       />
       <label for="dob">DOB</label>
